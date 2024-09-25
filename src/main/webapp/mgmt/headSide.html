@@ -1,0 +1,26 @@
+ <header class="header">
+        <div class="logo">Management Panel</div>
+    </header>
+    <aside class="sidebar">
+        <button class="sidebar-toggle" onclick="toggleSidebar()">☰</button>
+        <ul class="sidebar-list">
+            <li class="sidebar-item"><a href="dash.jsp">Dashboard</a></li>
+            <li class="sidebar-item"><a href="event.jsp">Manage Events</a></li>
+            <li class="sidebar-item"><a href="news.jsp">Manage News</a></li>
+            <li class="sidebar-item"><a href="thread.jsp">Manage Threads</a></li>
+            <li class="sidebar-item"><a href="resources.jsp">Manage Resources</a></li>
+            <li class="sidebar-item"><a href="localbsns.jsp">Manage Local Businesses</a></li>
+            <li class="sidebar-item"><a href="announcement.jsp">Manage Announcements</a></li>
+            <li class="sidebar-item"><a href="logout.jsp"> Logout</a></li>
+        </ul>
+    </aside>
+    <script>
+        function toggleSidebar() {
+            var sidebarList = document.querySelector('.sidebar-list');
+            if (sidebarList.style.display === 'block') {
+                sidebarList.style.display = 'none';
+            } else {
+                sidebarList.style.display = 'block';
+            }
+        }
+    </script>

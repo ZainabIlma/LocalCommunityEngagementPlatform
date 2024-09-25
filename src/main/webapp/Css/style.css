@@ -1,0 +1,404 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5em;
+    
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #333;
+    color: white;
+    position:fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding-top: 20px;
+}
+
+.sidebar-toggle {
+    display: none;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    text-align: left;
+    width: 100%;
+}
+
+.sidebar-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-item {
+    padding: 15px;
+    border-bottom: 1px solid #444;
+}
+
+.sidebar-item a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.main-content {
+    margin-left: 220px;
+    padding: 20px;
+    font-size: 1em;
+}
+
+.summary {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:stretch;
+}
+
+.card {
+    background-color: white;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex:  calc(50% - 500px);
+    text-align: center;
+}
+
+.card-title, .section-title, .update-title, .activity-title,.uevent-title {
+    margin:8px;
+    font-size: 1.2em;
+}
+
+.card-value {
+    font-size: 1.5em;
+    margin: 10px 0;
+    color: #4CAF50;
+}
+#update-section{
+    display:flex;
+    justify-content: space-evenly;
+    
+}
+.section-title{
+    color:#4CAF50;
+}
+.latest-updates, .latest-activities,.upcoming-events {
+    background-color: white;
+    padding: 15px;
+    margin:5px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex-direction:column;
+}
+
+.updates, .activities,.uevents {
+    display: flex;
+    flex-direction: column;
+}
+
+.update, .activity,.uevent {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.update-content, .activity-content,.uevent-content {
+    margin: 5px 0;
+    color: #555;
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: calc(100% - 220px);
+    margin-left: 220px;
+    font-size: 0.8em;
+}
+ .pagecontent{
+   		margin-left:210px;
+   		margin-bottom: 200px;
+   }
+   table, th,tr {
+    border: 1px solid #4CAF50 ;
+    
+}
+ .ttitle{
+	width:50%;
+}
+tr:nth-child(even) {
+    background-color: #77c47b;
+}
+tbody {
+    font-size: 95%;
+    font-style: italic;
+}
+.actions {
+    /* button styling here */
+}
+.table-container {
+    max-height: 200px; /* Set desired max height */
+    overflow-y: auto;  
+}
+
+.no-underline {
+    text-decoration: none; /* Remove underline */
+    color: black; /* Set text color to black */
+}
+
+.no-underline h3, .no-underline p {
+    color: #333; /* Ensure the text inside the div also has black color */
+}
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .sidebar-toggle {
+        display: block;
+    }
+
+    .sidebar-list {
+        display: none;
+    }
+
+    .main-content {
+        margin-left: 0;
+        min-width:fit-content;
+       
+    }
+
+    .footer {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .cards {
+        flex-direction: row;
+        align-items: center;
+        max-width: fit-content;
+        max-width: 100%;
+    }
+
+    .card {
+        flex: 1 1 30%;
+        
+    }
+    .carousel{
+        max-width: 100%;
+    }
+    .pagecontent{
+   		margin-left:0px;
+   }
+   
+}
+
+/* Admin-specific styles */
+.admin-content .summary .card {
+    background-color: #f5f5f5;
+    border:1px solid #ccc;
+}
+
+/* User-specific styles */
+.user-content .summary .card {
+    background-color: #e7f5e7;
+    border: 1px solid #4CAF50;
+}
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-slide {
+    display: flex;
+    width: 300%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: auto;
+}
+
+.business-spotlight {
+    margin: 20px 0;
+}
+
+.business-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.business-card {
+    background-color: white;
+    width: 80%;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+}
+
+.business-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.business-info {
+    padding: 10px;
+}
+
+.business-name {
+    font-size: 1.2em;
+    margin: 10px 0 5px;
+}
+
+.business-address {
+    color: #777;
+}
+.alist {
+    list-style-type: none;
+    padding: 0;
+    max-height: 300px; /* Adjust the height to show only three entries */
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #e9ecef;
+}
+.alist li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.alist li:last-child {
+    border-bottom: none;
+}
+.alist .atitle {
+    flex: 1;
+}
+.alist .adate,
+.alist .atime,
+.alist .ares,
+.alist .aauthor,
+.alist .areply,
+.alist .aloc,
+.alist .arlink {
+    margin-left: 10px;
+    white-space: nowrap;
+}
+.alist .actions {
+    display: flex;
+    justify-content: space-around;
+    margin-left: 10px;
+}
+.alist .actions img {
+    cursor: pointer;
+    margin:8px;
+}
+
+
+.rbtn {
+  align-items: center;
+  background-clip: padding-box;
+  background-color: #fa6400;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 3rem;
+  padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+  flex:1;
+  flex-direction: row;
+}
+
+.rbtn:hover,
+.rbtn:focus {
+  background-color: #fb8332;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+
+.rbtn:hover {
+  transform: translateY(-1px);
+}
+
+.rbtn:active {
+  background-color: #c85000;
+  box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
+  transform: translateY(0);
+}
+.hidden{
+    display:none;
+}
+.aform {
+    margin-bottom: 30px;
+    width:95%;
+    margin:10px;
+}
+.aform input, .aform textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.aform input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: auto;
+}
+.aform input[type="submit"]:hover {
+    background-color: #4caf4fdf;
+}
+.btnsec{
+    display:flex;
+    margin:10px;
+}
